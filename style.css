@@ -58,6 +58,7 @@ body{
     border-radius: 45%;
     height: 250px;
     width: 250px;
+    margin: 0 auto;
   }
 
   /* Set black background color, white text and some padding */
