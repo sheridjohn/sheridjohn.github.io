@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript Examples</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkAndEnableDarkMode()">
+  <div id ="page-container">
+    <div id="content-wrap">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">About</a></li>
+        <li><a href="cv.html">C.V</a></li>
+        <li class="active"><a href="examples.html">Javascript Examples</a></li>
+        <li><a href="reactPractice.html">React Practice</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="contact.html"> Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-xs-offset-2 col-xs-8 col-xs-offset-2">
+      <h1> Javascript Exercises</h1>
+      <p>This page contains a few examples of taking user input and performing
+        calculations on that input with javascript. These exercises include
+        calculating the <a href = "#difference">difference</a> between the smallest and largest numbers in
+        an array, calculating the <a href="#totalSum">total sum</a> of the input number,
+        returning the <a href ="#smallest">smallest
+        number</a> in an array, <a href ="#reverse">reversing an array</a>,
+        determining whether the user
+        input is a <a href="#palindrome">palindrome</a> or not.</p>
+        <br>
+        <hr>
+      </div>
+        <div class ="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+          <h4 id="difference">Difference between the smallest and largest numbers in
+        an array</h4>
+        <p>Please enter numbers seperated by commas in the input field below and
+          hit the calculate button to return the difference between the smallest
+          and largest numbers contained within
+          the array you entered.</p>
+          <input type="text" class="form-control" id="diff"><br>
+          <button class="btn btn-info" type="button" name="submit1" onclick="getDiff()">Submit</button>
+          <br>
+          <div class="col-xs-4 col-xs-offset-4" id="diffAnswer">
+            <p id="p1"></p>
+            <button class="btn btn-info" type="button" name="clearDiff" onclick="clearAnswer('diffAnswer')">Clear answer</button>
+          </div>
+        </div>
+        <div class ="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+        <hr>
+        <h4 id = "totalSum">Total sum of input parameter</h4>
+        <p>Please enter a number in the input field below and
+          hit the calculate button to return the total sum of
+          the numbers that make up the parameter you entered.
+        For example, if 3 is the input parameter, the return value should be 6,
+        as 1+2+3 = 6.</p>
+        <input type="number" class="form-control" id="sum"><br>
+        <button class="btn btn-info" type="button" name="submit2" onclick="getSum()">Submit</button>
+        <br>
+        <div class="col-xs-4 col-xs-offset-4" id="sumAnswer">
+          <p id="p2"></p>
+          <button class="btn btn-info" type="button" onclick="clearAnswer('sumAnswer')">Clear answer</button>
+        </div>
+      </div>
+      <div class ="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+        <hr>
+        <h4 id ="smallest">Return the smallest number within an array</h4>
+        <p>Please enter numbers seperated by commas in the input field below and
+          hit the calculate button to return the smallest number contained within
+          the array you entered.</p>
+          <input type="text" class="form-control" id="smallestInArray"><br>
+          <button class="btn btn-info" type="button" name="submit3" onclick="getSmallest()">Submit</button>
+          <br>
+          <div class="col-xs-4 col-xs-offset-4"id="smallestAnswer">
+            <p id="p3"></strong></p>
+            <button class="btn btn-info" type="button" onclick="clearAnswer('smallestAnswer')">Clear answer</button>
+          </div>
+        </div>
+        <div class ="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+          <hr>
+          <h4 id="reverse">Reverse an array</h4>
+          <p>Please enter numbers seperated by commas in the input field below and
+          hit the calculate button to return the reverse of
+          the array you entered.</p>
+          <input type="text" class="form-control" id= "reverseInput"><br>
+          <button class="btn btn-info" type="button" onclick="getReverse()">Submit</button>
+          <br>
+          <div class="col-xs-4 col-xs-offset-4" id="reversedAnswer">
+            <p id="p4"></p>
+            <button class="btn btn-info" type="button" onclick="clearAnswer('reversedAnswer')">Clear answer</button>
+          </div>
+        </div>
+        <div class ="col-xs-offset-3 col-xs-6 col-xs-offset-3">
+          <hr>
+          <h4 id="palindrome">Palindrome check</h4>
+          <p>A palindrome is a word, phrase, or sequence that reads the same
+          backwards as forwards. For example, "madam", "nurses run", "16461".
+        Please enter a word, or a phrase, or a number, in the input field below
+        and hit the calculate button to determine if what you have entered is a
+        palindrome or not.</p><br>
+        <input type="text" class="form-control" id= "palindromeInput"><br>
+        <button class="btn btn-info" type="button" name="submit" onclick="isPalindrome()">Submit</button>
+        <br>
+        <div class="col-xs-4 col-xs-offset-4" id="palindromeAnswer">
+          <p id="p5"></p>
+          <button class="btn btn-info" type="button" onclick="clearAnswer('palindromeAnswer')">Clear answer</button>
+          <br><br>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+<footer class="container-fluid text-center">
+  <div class="col-sm-3 text-left">
+    <h4>LinkedIn:</h4>
+        <p>
+          <a href="https://www.linkedin.com/in/john-sheridan-8a91b86b/">John Sheridan</a>
+        </p>
+  </div>
+  <div class="col-sm-offset-7 col-sm-2 text-left">
+    <h4>Toggle Mode</h4>
+    <button id="modeToggle" onclick="toggleMode()">Dark Mode</button>
+  </div>
+</footer>
+</div>
+</body>
+</html>
