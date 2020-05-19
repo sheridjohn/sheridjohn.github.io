@@ -132,7 +132,6 @@ body{
     padding: 0;
     border-radius:2em;
     width: 110px;
-    height: auto;
     box-sizing: border-box;
     text-decoration:none;
     background-color:#121212;
@@ -153,3 +152,7 @@ color: #121212;
     }
     .row.content {height:auto;}
   }
+.col-sm-2 button{
+  height:auto;
+  margin-bottom: auto;
+}
