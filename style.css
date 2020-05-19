@@ -151,8 +151,9 @@ color: #121212;
       padding: 15px;
     }
     .row.content {height:auto;}
-  }
-.col-sm-2 button{
-  height:auto;
-  margin-bottom: auto;
+    
+    .col-sm-2 button{
+      height:auto;
+      margin-bottom: auto;
+    }
 }
