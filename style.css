@@ -152,10 +152,7 @@ color: #121212;
     }
     .row.content {height:auto;}
     
-    .col-sm-2 button{
-      height:auto;
-    }
-    .col-sm-2{
-      padding-bottom:200px;
+    footer{
+      padding: 500px;
     }
 }
