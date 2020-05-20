@@ -151,7 +151,11 @@ color: #121212;
       padding: 15px;
     }
     .row.content {height:auto;}
+    /*double footer height and padding between age content and footer for mobile view*/
     footer{
-      padding-bottom:50px;
+      height:250px;
+    }
+    #content-wrap{
+      padding-bottom: 250px;
     }
   }
